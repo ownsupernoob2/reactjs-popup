@@ -1,20 +1,20 @@
 /* Algo to calculate position
-  1. center position for popup content : the center of the trigger will be the center of the content content
+  1. Center position for popup content : the center of the trigger will be the center of the content content
       so the popup content position will be like this :
       top => the y of the center for the trigger element : trigger.top + trigger.height/2
       left => the x of the center for the trigger element : trigger.left + trigger.width/2
 
-  2. translate position according to the first  position attribute  passed  in the function argument
+  2.Translate position according to the first  position attribute passed in the function argument
       for example :
         position = 'left top'
         we need to handle the first argument in the position: 'left' => that's mean we need to translate the popup content according to the X axis by - content.width/2
 
-  3.translate position according to the first  position attribute  passed  in the function argument
+  3.Translate position according to the first  position attribute  passed  in the function argument
     for example :
       position = 'left top'
       the second argument 'top' => translate popup content by + content.height*4/5
 
-  4. check if calculated position is going out of bounds of wrapper box or not. If yes repeat 1-3 for next position enum. By default wrapper box is window element
+  4. Check if calculated position is going out of bounds of wrapper box or not. If yes repeat 1-3 for next position enum. By default wrapper box is window element
 */
 
 function getCoordinatesForPosition(
